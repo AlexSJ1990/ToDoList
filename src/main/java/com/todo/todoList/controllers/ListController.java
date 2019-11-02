@@ -1,5 +1,6 @@
 package com.todo.todoList.controllers;
 
+import com.todo.todoList.domains.ToDoList;
 import com.todo.todoList.repository.ListRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,12 +23,12 @@ public class ListController {
     }
 
     @GetMapping("_/lists")
-    public List<com.todo.todoList.domains.List> findall() {
+    public List<ToDoList> findall() {
         return repository.findAll();
     }
 
     @GetMapping("_/lists/{list_id}")
-    public Optional<com.todo.todoList.domains.List> findListById(@PathVariable Integer list_id) {
+    public Optional<ToDoList> findListById(@PathVariable Integer list_id) {
         return repository.findById(list_id);
     }
 }

@@ -5,7 +5,7 @@ import java.time.Instant;
 
 @Entity
 @Table(name="ListItem")
-public class ListItem {
+public class ToDoListItem {
     @Id
     @GeneratedValue
     private int id;

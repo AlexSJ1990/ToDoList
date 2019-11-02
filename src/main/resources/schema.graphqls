@@ -1,0 +1,23 @@
+schema {
+    query: Query
+}
+
+type Query {
+    alToDolLists: [ToDoList],
+    specificToDoList: ToDoList
+}
+
+type ToDoList {
+    id: Int,
+    name: String,
+    status: String,
+    dateCreated: Instant
+}
+
+type ToDoListItem {
+    id: Int,
+    description: String,
+    status: String,
+    listId: Int,
+    dateCreated: Instant
+}

@@ -4,8 +4,8 @@ import javax.persistence.*;
 import java.time.Instant;
 
 @Entity
-@Table(name="list")
-public class List {
+@Table(name="todolist")
+public class ToDoList {
     @Id
     @GeneratedValue
     private int id;
